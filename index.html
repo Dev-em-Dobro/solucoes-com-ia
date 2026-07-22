@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Soluções que vendem com IA · Consultoria Dev em Dobro</title>
-<meta name="description" content="6 semanas de acompanhamento ao vivo pra você transformar IA em renda extra: sites, agentes de WhatsApp e sistemas que empresas pagam pra ter. Negócio pronto pra rodar. Risco zero — sem resultado, dinheiro de volta." />
+<title>Builders Club · Dev em Dobro</title>
+<meta name="description" content="Construa um negócio de soluções de IA com potencial de faturar até R$ 10 mil por mês. Modelos, sistemas, scripts, propostas e orientação pra encontrar clientes. Risco zero — sem resultado, dinheiro de volta." />
 
 <!-- Open Graph -->
-<meta property="og:title" content="Soluções que vendem com IA · Dev em Dobro" />
-<meta property="og:description" content="Negócio pronto pra rodar e faturar todos os meses — sites, agentes de WhatsApp, sistemas e scripts. Sem resultado, dinheiro de volta." />
+<meta property="og:title" content="Builders Club · Dev em Dobro" />
+<meta property="og:description" content="Construa um negócio de soluções de IA com potencial de faturar até R$ 10 mil por mês. Sem precisar criar tudo sozinho." />
 <meta property="og:type" content="website" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
 
 <style>
 /* ============================================================
-   Renda Extra com Claude Code — Landing Page
+   Builders Club — Landing Page
    Claude Code brand palette: warm coral/terracotta on cream ivory
    Fraunces (display serif) · Inter (UI) · JetBrains Mono (code)
    ============================================================ */
@@ -193,9 +193,9 @@ em.mk{ font-style:normal; color:var(--coral-deep); font-weight:600; }
   opacity:.5;
 }
 
-.hero-inner{ position:relative; z-index:1; display:grid; grid-template-columns:1.03fr .97fr; gap:48px; align-items:center; }
+.hero-inner{ position:relative; z-index:1; display:grid; grid-template-columns:1fr 1.12fr; gap:40px; }
 
-.hero-badges{ display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 26px; }
+.hero-badges{ display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 20px; }
 .badge{
   font-family:var(--mono); font-size:.74rem; font-weight:500;
   padding:.5em .9em; border-radius:var(--r-full);
@@ -207,24 +207,36 @@ em.mk{ font-style:normal; color:var(--coral-deep); font-weight:600; }
 @keyframes pulse{ 0%{box-shadow:0 0 0 0 rgba(224,72,61,.55);} 70%{box-shadow:0 0 0 8px rgba(224,72,61,0);} 100%{box-shadow:0 0 0 0 rgba(224,72,61,0);} }
 
 .hero h1{
-  font-size:clamp(2.6rem,6vw,4.5rem);
-  letter-spacing:-.035em;
+  font-size:clamp(1.75rem,3.2vw,2.45rem);
+  letter-spacing:-.025em;
+  max-width:22ch;
+  line-height:1.18;
+}
+.hero h1 .hl-serif{
+  font-size:1.05em;
+  font-style:italic;
 }
 .hero h1 .line2{ display:block; }
 .hero-sub{
-  font-size:clamp(1.08rem,1.9vw,1.32rem);
+  font-size:clamp(.95rem,1.35vw,1.05rem);
   color:var(--muted);
-  max-width:52ch;
-  margin-top:1.2rem;
+  max-width:46ch;
+  margin-top:1rem;
   line-height:1.55;
 }
-.hero-actions{ display:flex; flex-wrap:wrap; gap:14px; margin-top:2.1rem; }
-.hero-trust{ display:flex; align-items:center; gap:14px 22px; margin-top:1.7rem; flex-wrap:wrap; }
+.hero-actions{ display:flex; flex-wrap:wrap; gap:14px; margin-top:1.6rem; }
+.hero-trust{ display:flex; align-items:center; gap:14px 22px; margin-top:1.3rem; flex-wrap:wrap; }
 .hero-trust .t{ display:flex; align-items:center; gap:.5em; font-size:.9rem; color:var(--muted); }
 .hero-trust svg{ width:18px;height:18px;color:var(--coral-deep); flex:none; }
 
-/* ---- Hero deliverable mockups ---- */
-.hero-visual{ position:relative; width:100%; max-width:500px; margin:0 auto; }
+/* ---- Hero visual (AI collage) ---- */
+.hero-visual{ position:relative; width:100%; max-width:none; margin:0; }
+.hero-visual img{
+  width:100%; height:auto; display:block;
+  border-radius:var(--r-xl);
+  box-shadow:var(--sh-lg);
+  border:1px solid var(--line);
+}
 
 .mock-browser{
   position:relative; z-index:1;
@@ -282,7 +294,186 @@ em.mk{ font-style:normal; color:var(--coral-deep); font-weight:600; }
   .hero-inner{ grid-template-columns:1fr; gap:40px; text-align:center; }
   .hero-badges,.hero-actions,.hero-trust{ justify-content:center; }
   .hero-sub{ margin-left:auto; margin-right:auto; }
-  .hero-visual{ order:2; max-width:440px; }
+  .hero h1{ max-width:20ch; margin-left:auto; margin-right:auto; }
+  .hero-visual{ order:2; max-width:520px; margin:0 auto; }
+}
+
+/* ---- Entregáveis scroll preview ---- */
+.entreg-preview{ margin-bottom:48px; }
+.entreg-frame{
+  position:relative; max-width:720px; margin:0 auto;
+  background:var(--surface-2); border:1px solid var(--line-2);
+  border-radius:var(--r-lg); box-shadow:var(--sh-lg); overflow:hidden;
+}
+.entreg-frame .ef-bar{
+  display:flex; align-items:center; gap:6px; padding:11px 14px;
+  background:var(--cream-2); border-bottom:1px solid var(--line);
+}
+.entreg-frame .ef-bar .d{ width:10px;height:10px;border-radius:50%; }
+.entreg-frame .ef-bar .d:nth-child(1){ background:#ec6a5e; }
+.entreg-frame .ef-bar .d:nth-child(2){ background:#f4bf4f; }
+.entreg-frame .ef-bar .d:nth-child(3){ background:#61c554; }
+.entreg-frame .ef-url{
+  flex:1; margin-left:8px; font-family:var(--mono); font-size:.68rem; color:var(--muted);
+  background:var(--surface); padding:.4em .8em; border-radius:999px; border:1px solid var(--line); text-align:center;
+}
+.entreg-viewport{
+  height:min(420px, 52vw); overflow:hidden; position:relative; background:var(--cream);
+}
+.entreg-viewport img{
+  width:100%; height:auto; display:block;
+  animation:entregScroll 18s ease-in-out infinite;
+  transform-origin:top center;
+}
+@keyframes entregScroll{
+  0%,8%{ transform:translateY(0); }
+  92%,100%{ transform:translateY(calc(-100% + min(420px, 52vw))); }
+}
+@media (prefers-reduced-motion: reduce){
+  .entreg-viewport img{ animation:none; }
+}
+.entreg-caption{
+  text-align:center; margin-top:14px; font-family:var(--mono); font-size:.72rem;
+  color:var(--muted); letter-spacing:.02em;
+}
+.entreg-caption a{ color:var(--coral-deep); text-decoration:underline; text-underline-offset:3px; }
+
+/* ---- Depoimentos / resultados ---- */
+.depo-sec{
+  background:var(--dark);
+  color:var(--on-dark);
+  padding:96px 0 80px;
+  overflow:hidden;
+}
+.depo-sec .section-head{ max-width:720px; margin-left:auto; margin-right:auto; text-align:center; margin-bottom:44px; }
+.depo-sec .eyebrow{ color:var(--coral); justify-content:center; }
+.depo-sec .eyebrow::before{ background:var(--coral); }
+.depo-sec h2{ color:var(--on-dark); }
+.depo-sec .hl-serif{ color:var(--coral); }
+.depo-sec .section-head p{ color:var(--on-dark-dim); }
+
+.depo-carousel{
+  position:relative;
+  max-width:420px;
+  margin:0 auto;
+}
+.depo-viewport{
+  position:relative;
+  width:100%;
+}
+.depo-item{
+  display:none;
+  width:100%;
+  text-align:center;
+  margin:0;
+}
+.depo-item.is-active{
+  display:block;
+  animation:depoFade .4s ease;
+}
+@keyframes depoFade{
+  from{ opacity:0; transform:translateY(8px); }
+  to{ opacity:1; transform:none; }
+}
+@media (prefers-reduced-motion: reduce){
+  .depo-item.is-active{ animation:none; }
+}
+
+.depo-shot{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+  background:#111;
+}
+
+.depo-cap{
+  margin-top:18px;
+  display:flex; flex-direction:column; gap:4px; align-items:center;
+}
+.depo-cap .amt{
+  font-family:var(--serif); font-weight:600; font-size:1.25rem;
+  color:var(--coral); letter-spacing:-.02em;
+}
+.depo-cap small{
+  font-size:.86rem; color:var(--on-dark-dim); line-height:1.35; max-width:28ch;
+}
+
+.depo-controls{
+  display:flex; align-items:center; justify-content:center; gap:18px;
+  margin-top:28px;
+}
+.depo-btn{
+  width:44px; height:44px; border-radius:50%;
+  border:1px solid rgba(244,239,230,.18);
+  background:rgba(244,239,230,.06);
+  color:var(--on-dark);
+  display:grid; place-items:center;
+  cursor:pointer;
+  transition:background .2s ease, border-color .2s ease, transform .2s ease;
+}
+.depo-btn:hover{
+  background:rgba(217,119,87,.2);
+  border-color:rgba(217,119,87,.5);
+}
+.depo-btn:active{ transform:scale(.96); }
+.depo-btn svg{ width:20px; height:20px; }
+.depo-dots{ display:flex; gap:8px; align-items:center; }
+.depo-dots button{
+  width:8px; height:8px; border-radius:50%;
+  border:0; padding:0; cursor:pointer;
+  background:rgba(244,239,230,.28);
+  transition:background .2s ease, width .2s ease;
+}
+.depo-dots button[aria-current="true"]{
+  background:var(--coral);
+  width:22px; border-radius:999px;
+}
+
+/* ---- Bônus ---- */
+.bonus-grid{
+  display:grid; grid-template-columns:1.15fr .85fr; gap:22px; align-items:stretch;
+}
+@media(max-width:860px){ .bonus-grid{ grid-template-columns:1fr; } }
+.bonus-card{
+  background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-xl); padding:36px 34px; box-shadow:var(--sh-sm);
+}
+.bonus-card.featured{
+  background:linear-gradient(160deg,var(--dark),var(--dark-2));
+  color:var(--on-dark); border-color:rgba(217,119,87,.35);
+  position:relative; overflow:hidden;
+}
+.bonus-card.featured::before{
+  content:""; position:absolute; width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,var(--coral-glow),transparent 70%);
+  top:-100px; right:-80px; filter:blur(28px); pointer-events:none;
+}
+.bonus-card .tag{
+  display:inline-block; font-family:var(--mono); font-size:.7rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--coral-deep); font-weight:600; margin-bottom:12px;
+}
+.bonus-card.featured .tag{ color:var(--coral); position:relative; z-index:1; }
+.bonus-card h3{ font-size:clamp(1.35rem,2.8vw,1.75rem); margin-bottom:.7rem; position:relative; z-index:1; }
+.bonus-card.featured h3{ color:var(--on-dark); }
+.bonus-card .lead{ color:var(--muted); font-size:1.02rem; line-height:1.55; margin-bottom:1.1rem; position:relative; z-index:1; }
+.bonus-card.featured .lead{ color:var(--on-dark-dim); }
+.bonus-card ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; position:relative; z-index:1; }
+.bonus-card li{
+  display:flex; gap:10px; align-items:flex-start;
+  font-size:.98rem; line-height:1.45; color:var(--ink-2);
+}
+.bonus-card.featured li{ color:var(--on-dark); }
+.bonus-card li svg{ width:18px;height:18px;color:var(--coral-deep); flex:none; margin-top:3px; }
+.bonus-card.featured li svg{ color:var(--coral); }
+.bonus-card .note{
+  margin-top:18px; padding:12px 14px; border-radius:var(--r-md);
+  background:var(--coral-soft); color:var(--coral-deep);
+  font-size:.92rem; font-weight:600; line-height:1.45; position:relative; z-index:1;
+}
+.bonus-card.featured .note{
+  background:rgba(217,119,87,.14); color:var(--on-dark); border:1px solid rgba(217,119,87,.28);
 }
 
 /* ============================================================
@@ -672,7 +863,7 @@ section{ position:relative; }
   <div class="wrap">
     <a class="brand" href="#top">
       <span class="logo">&gt;_</span>
-      dev em <b>dobro</b>
+      builders <b>club</b>
     </a>
     <div class="nav-cta">
       <a class="btn btn-primary" href="#investimento">Garantir vaga</a>
@@ -689,13 +880,13 @@ section{ position:relative; }
   </div>
   <div class="wrap hero-inner">
     <div>
-      <span class="eyebrow">Consultoria · 6 semanas ao vivo</span>
+      <span class="eyebrow">Builders Club · 6 semanas ao vivo</span>
       <div class="hero-badges">
         <span class="badge live"><span class="dot"></span>Inscrições abertas</span>
         <span class="badge"><span class="dot"></span>Garantia de resultado</span>
       </div>
-      <h1>Soluções que <span class="hl-serif">vendem</span> <span class="line2">com IA.</span></h1>
-      <p class="hero-sub">Te entregamos um negócio pronto para rodar e faturar todos os meses — sites, agentes de WhatsApp, sistemas, modelo de negócio, plataforma com potenciais clientes, scripts de abordagens e propostas comerciais. Você encontra os clientes com a nossa orientação e fecha os primeiros em semanas.</p>
+      <h1>Construa um negócio de soluções de IA com potencial de faturar até <span class="hl-serif">R$&nbsp;10&nbsp;mil</span> por mês</h1>
+      <p class="hero-sub">Sem precisar criar tudo sozinho: entregamos os modelos, sistemas, scripts, propostas e a orientação para você encontrar clientes e vender soluções simples de IA para empresas.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="#investimento">Quero minha vaga <span class="arw">→</span></a>
         <a class="btn btn-ghost btn-lg" href="#entrega">O que você recebe</a>
@@ -706,53 +897,8 @@ section{ position:relative; }
       </div>
     </div>
 
-    <!-- Deliverable mockups -->
-    <div class="hero-visual" aria-hidden="true">
-      <!-- Site (browser) -->
-      <div class="mock-browser">
-        <div class="mb-bar">
-          <span class="d"></span><span class="d"></span><span class="d"></span>
-          <span class="mb-url">site-do-cliente.com</span>
-        </div>
-        <div class="mb-screen">
-          <div class="site-nav">
-            <span class="site-logo">Style &amp; Navalha</span>
-            <span class="site-links"><i></i><i></i><i></i></span>
-          </div>
-          <div class="site-hero">
-            <span class="site-tag">Barbearia</span>
-            <div class="site-title">Corte &amp; barba<br>com hora marcada</div>
-            <div class="site-lines"><i></i><i class="s2"></i></div>
-            <span class="site-btn">Agendar horário</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="mock-cards">
-        <!-- WhatsApp agent -->
-        <div class="mock-chat float-a">
-          <div class="mc-head">
-            <span class="mc-av">IA</span>
-            <div class="mc-id"><b>Atendimento</b><small>online agora</small></div>
-          </div>
-          <div class="mc-body">
-            <span class="bub in">Tem horário hoje?</span>
-            <span class="bub out">Tenho sim! 15h ou 17h <em>✓✓</em></span>
-            <span class="bub in">Fecha 15h então</span>
-          </div>
-          <div class="mc-foot">responde em segundos</div>
-        </div>
-
-        <!-- System / dashboard -->
-        <div class="mock-stat float-b">
-          <span class="ms-label">Vendas do mês</span>
-          <span class="ms-value">R$ 4.280</span>
-          <span class="ms-trend">▲ recorrência ativa</span>
-          <div class="ms-bars">
-            <i style="--h:38%"></i><i style="--h:60%"></i><i style="--h:48%"></i><i style="--h:74%"></i><i style="--h:90%"></i>
-          </div>
-        </div>
-      </div>
+    <div class="hero-visual">
+      <img src="assets/hero-builders-club.png" width="1040" height="780" alt="Builders Club: Cadu e Beto com landing page, atendimento no WhatsApp, CRM e venda fechada" />
     </div>
   </div>
 </header>
@@ -834,13 +980,79 @@ section{ position:relative; }
   </div>
 </section>
 
-<!-- ============ O QUE VOCÊ LEVA (ENTREGA) ============ -->
-<section class="section" id="entrega">
+<!-- ============ RESULTADOS / DEPOIMENTOS ============ -->
+<section class="depo-sec" id="resultados">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">O que a consultoria entrega</span>
+      <span class="eyebrow">Prova social</span>
+      <h2>Esses são os resultados que nós e nossos alunos conquistamos em <span class="hl-serif">menos de 1 semana</span></h2>
+      <p>Fechamentos, reuniões e aprovações reais — direto do WhatsApp.</p>
+    </div>
+
+    <div class="depo-carousel reveal" id="depoCarousel" aria-roledescription="carrossel" aria-label="Resultados e depoimentos">
+      <div class="depo-viewport" id="depoViewport">
+        <figure class="depo-item is-active" data-slide>
+          <img class="depo-shot" src="assets/depo-1.png" alt="Aluno fechou dois projetos no mesmo cliente" width="410" height="512" />
+          <figcaption class="depo-cap">
+            <span class="amt">R$ 5.700</span>
+            <small>Dois projetos fechados pro mesmo cliente</small>
+          </figcaption>
+        </figure>
+        <figure class="depo-item" data-slide>
+          <img class="depo-shot" src="assets/depo-2.png" alt="Aluno agendou reunião com potencial cliente" width="512" height="164" />
+          <figcaption class="depo-cap">
+            <span class="amt">Reunião marcada</span>
+            <small>Já saiu da teoria e agendou com o lead</small>
+          </figcaption>
+        </figure>
+        <figure class="depo-item" data-slide>
+          <img class="depo-shot" src="assets/depo-3.png" alt="Proposta fechada em US$ 5.000" width="512" height="182" />
+          <figcaption class="depo-cap">
+            <span class="amt">US$ 5.000</span>
+            <small>Proposta internacional fechada</small>
+          </figcaption>
+        </figure>
+        <figure class="depo-item" data-slide>
+          <img class="depo-shot" src="assets/depo-4.png" alt="Cliente aprovando a entrega" width="512" height="171" />
+          <figcaption class="depo-cap">
+            <span class="amt">Aprovadíssimo</span>
+            <small>Cliente aprovando a entrega na hora</small>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="depo-controls">
+        <button type="button" class="depo-btn" id="depoPrev" aria-label="Depoimento anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="depo-dots" id="depoDots" role="tablist" aria-label="Selecionar depoimento"></div>
+        <button type="button" class="depo-btn" id="depoNext" aria-label="Próximo depoimento">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ O QUE VOCÊ LEVA (ENTREGA) ============ -->
+<section class="section alt" id="entrega">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">O que o Builders Club entrega</span>
       <h2>Não é um curso. É um negócio pronto pra rodar.</h2>
       <p>90% do trabalho pesado já vem pronto. Você monta, personaliza e entrega, com a gente acompanhando cada passo.</p>
+    </div>
+
+    <div class="entreg-preview reveal">
+      <div class="entreg-frame" aria-hidden="true">
+        <div class="ef-bar">
+          <span class="d"></span><span class="d"></span><span class="d"></span>
+          <span class="ef-url">entregaveis · central do Builders Club</span>
+        </div>
+        <div class="entreg-viewport">
+          <img src="assets/entregaveis-scroll.png" alt="" />
+        </div>
+      </div>
     </div>
 
     <div class="stack-layout single">
@@ -883,6 +1095,44 @@ section{ position:relative; }
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ============ BÔNUS ============ -->
+<section class="section" id="bonus">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Bônus inclusos</span>
+      <h2>Além do negócio pronto, você ainda leva isto.</h2>
+      <p>Ferramentas pra executar mais rápido — e um atalho pessoal pra quem entra agora.</p>
+    </div>
+    <div class="bonus-grid">
+      <div class="bonus-card reveal d1">
+        <span class="tag">Bônus</span>
+        <h3>Formação IA e Automações</h3>
+        <p class="lead">Dominar as ferramentas de Inteligência Artificial que estão revolucionando o mercado.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Aumentar a velocidade de execução</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Ampliar a capacidade técnica</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Criar mais soluções</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Automatizar tarefas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Entregar projetos com mais eficiência</li>
+        </ul>
+      </div>
+      <div class="bonus-card featured reveal d2">
+        <span class="tag">Para os 5 primeiros</span>
+        <h3>Call individual de implementação</h3>
+        <p class="lead">Atendimento personalizado — não uma aula genérica. Na conversa definimos juntos:</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Seu momento atual</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Objetivo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Nicho ou oportunidade</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Primeira solução</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg> Próximos passos</li>
+        </ul>
+        <p class="note">Bônus exclusivo para os 5 primeiros compradores do Builders Club.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -945,7 +1195,7 @@ section{ position:relative; }
       </div>
 
       <div class="price-card reveal d2">
-        <span class="kicker">Consultoria completa · 6 semanas</span>
+        <span class="kicker">Builders Club · 6 semanas</span>
         <p class="anchor-old">De <s>meses no escuro</s> para o caminho pronto</p>
         <div class="price-amount">
           <span class="cur">R$</span><span class="num">997</span>
@@ -1046,8 +1296,8 @@ section{ position:relative; }
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="logo">&gt;_</span> dev em <b style="color:var(--coral)">dobro</b></a>
-    <small>© Dev em Dobro · Soluções que vendem com IA. Valores citados são referência de mercado, não promessa de ganho.</small>
+    <a class="brand" href="#top"><span class="logo">&gt;_</span> builders <b style="color:var(--coral)">club</b></a>
+    <small>© Dev em Dobro · Builders Club. Valores citados são referência de mercado, não promessa de ganho.</small>
   </div>
 </footer>
 
@@ -1083,6 +1333,72 @@ section{ position:relative; }
       });
     }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
     reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  // Depoimentos carousel (fade — um slide por vez)
+  var slides = Array.prototype.slice.call(document.querySelectorAll('#depoViewport [data-slide]'));
+  var dotsWrap = document.getElementById('depoDots');
+  var prevBtn = document.getElementById('depoPrev');
+  var nextBtn = document.getElementById('depoNext');
+  var index = 0;
+  var autoTimer = null;
+
+  function goTo(i){
+    if (!slides.length) return;
+    index = (i + slides.length) % slides.length;
+    slides.forEach(function(slide, si){
+      slide.classList.toggle('is-active', si === index);
+    });
+    if (dotsWrap){
+      Array.prototype.forEach.call(dotsWrap.children, function(dot, di){
+        dot.setAttribute('aria-current', di === index ? 'true' : 'false');
+      });
+    }
+  }
+
+  function buildDots(){
+    if (!dotsWrap) return;
+    dotsWrap.innerHTML = '';
+    slides.forEach(function(_, i){
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Ir para depoimento ' + (i + 1));
+      b.addEventListener('click', function(){ goTo(i); restartAuto(); });
+      dotsWrap.appendChild(b);
+    });
+  }
+
+  function restartAuto(){
+    if (autoTimer) clearInterval(autoTimer);
+    if (prefersReduced || slides.length < 2) return;
+    autoTimer = setInterval(function(){ goTo(index + 1); }, 5500);
+  }
+
+  if (slides.length){
+    buildDots();
+    goTo(0);
+    if (prevBtn) prevBtn.addEventListener('click', function(){ goTo(index - 1); restartAuto(); });
+    if (nextBtn) nextBtn.addEventListener('click', function(){ goTo(index + 1); restartAuto(); });
+
+    var startX = 0;
+    var deltaX = 0;
+    var viewport = document.getElementById('depoViewport');
+    if (viewport){
+      viewport.addEventListener('touchstart', function(e){
+        startX = e.touches[0].clientX;
+        deltaX = 0;
+        if (autoTimer) clearInterval(autoTimer);
+      }, {passive:true});
+      viewport.addEventListener('touchmove', function(e){
+        deltaX = e.touches[0].clientX - startX;
+      }, {passive:true});
+      viewport.addEventListener('touchend', function(){
+        if (Math.abs(deltaX) > 50) goTo(index + (deltaX < 0 ? 1 : -1));
+        restartAuto();
+      });
+    }
+
+    restartAuto();
   }
 })();
 </script>
